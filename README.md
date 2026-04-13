@@ -40,7 +40,7 @@ the official Muthur Command base images.
 Currently available base images:
 
 - [Home Assistant Community Add-ons Alpine Base Image][base-alpine]
-- [Home Assistant Community Add-ons Alpine Python Base Image][base-alpine-python]
+- [Community Add-ons Alpine Python base image][base-alpine-python]
 - [Home Assistant Community Add-ons Debian Base Image][base-debian]
 - [Home Assistant Community Add-ons Ubuntu Base Image][base-ubuntu]
 - [Official Home Assistant Alpine Docker Base Image][home-assistant-base]
@@ -87,14 +87,17 @@ See the **`lib/`** modules for available functions.
 
 ## CI
 
-Workflows under **`.github/workflows/`** run Markdown, Shellcheck, Yamllint, and Prettier checks.
+Workflows under **`.github/workflows/`** run Markdown, Shellcheck, Yamllint,
+and Prettier checks.
 
 ## License
 
-**MIT** — see **LICENSE.md**. Upstream copyright (Franck Nijhof et al.) retained. Add a **NOTICE** for the MCOS fork when legal approves.
+**MIT** — see **LICENSE.md**. Upstream copyright (Franck Nijhof et al.)
+retained. Add a **NOTICE** for the MCOS fork when legal approves.
 
 ## Links
 
-- Issues / PRs: **`https://github.com/mcio-addons/bashio`** (adjust if your fork URL differs)
+- Issues / PRs: **`https://github.com/mcio-addons/bashio`**
+  (adjust if your fork URL differs)
 - Upstream: **`https://github.com/hassio-addons/bashio`**
 - Base images: **`https://github.com/mcio-addons/docker-base`**
