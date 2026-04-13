@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Home Assistant Community Add-ons: Bashio
-# Bashio is a bash function library for use with Home Assistant add-ons.
+# MCOS · Bashio (muthur-command)
+# Bash helpers for MCOS add-on containers; Supervisor REST API compatible.
 #
 # It contains a set of commonly used operations and can be used
 # to be included in add-on scripts to reduce code duplication across add-ons.
@@ -71,10 +71,10 @@ bashio::string.length() {
 # Returns a substring of a string.
 #
 # stringZ=abcABC123ABCabc
-# hass.string.substring "${stringZ}" 0      # abcABC123ABCabc
-# hass.string.substring "${stringZ}" 1      # bcABC123ABCabc
-# hass.string.substring "${stringZ}" 7      # 23ABCabc
-# hass.string.substring "${stringZ}" 7 3    # 23AB
+# bashio::string.substring "${stringZ}" 0      # abcABC123ABCabc
+# bashio::string.substring "${stringZ}" 1      # bcABC123ABCabc
+# bashio::string.substring "${stringZ}" 7      # 23ABCabc
+# bashio::string.substring "${stringZ}" 7 3    # 23AB
 #
 # Arguments:
 #   $1 String to return a substring off

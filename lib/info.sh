@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Home Assistant Community Add-ons: Bashio
-# Bashio is a bash function library for use with Home Assistant add-ons.
+# MCOS · Bashio (muthur-command)
+# Bash helpers for MCOS add-on containers; Supervisor REST API compatible.
 #
 # It contains a set of commonly used operations and can be used
 # to be included in add-on scripts to reduce code duplication across add-ons.
@@ -54,7 +54,7 @@ function bashio::info() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the Home Assistant Supervisor version used.
+# Returns the MCOS Supervisor version used.
 # ------------------------------------------------------------------------------
 function bashio::info.supervisor() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -62,7 +62,7 @@ function bashio::info.supervisor() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the Home Assistant version used.
+# Returns the MCOS Core version used.
 # ------------------------------------------------------------------------------
 function bashio::info.homeassistant() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -70,7 +70,7 @@ function bashio::info.homeassistant() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the hassos version running on the host system.
+# Returns the OS version field on the host (Supervisor JSON key: hassos).
 # ------------------------------------------------------------------------------
 function bashio::info.hassos() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -158,7 +158,7 @@ function bashio::info.operating_system() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the current state of Home Assistant Supervisor
+# Returns the current state of MCOS Supervisor
 # ------------------------------------------------------------------------------
 function bashio::info.state() {
     bashio::log.trace "${FUNCNAME[0]}"

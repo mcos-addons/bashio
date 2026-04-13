@@ -6,6 +6,11 @@ on:
   push:
     branches:
       - main
+      - mc
+
+permissions:
+  contents: write
+  pull-requests: read
 
 jobs:
   update_release_draft:

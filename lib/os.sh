@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Home Assistant Community Add-ons: Bashio
-# Bashio is a bash function library for use with Home Assistant add-ons.
+# MCOS · Bashio (muthur-command)
+# Bash helpers for MCOS add-on containers; Supervisor REST API compatible.
 #
 # It contains a set of commonly used operations and can be used
 # to be included in add-on scripts to reduce code duplication across add-ons.
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# Updates HassOS to the latest version.
+# Updates the MCOS OS (Supervisor /os/update) to the latest version.
 #
 # Arguments:
 #   $1 Version to update to (optional)
@@ -28,7 +28,7 @@ function bashio::os.update() {
 }
 
 # ------------------------------------------------------------------------------
-# Load HassOS host configuration from USB stick.
+# Load MCOS OS host configuration from USB stick.
 # ------------------------------------------------------------------------------
 function bashio::os.config_sync() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -36,7 +36,7 @@ function bashio::os.config_sync() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns a JSON object with generic Home Assistant information.
+# Returns a JSON object with generic MCOS Core information.
 #
 # Arguments:
 #   $1 Cache key to store results in (optional)
@@ -82,7 +82,7 @@ function bashio::os() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the version of HassOS.
+# Returns the version of the MCOS OS.
 # ------------------------------------------------------------------------------
 function bashio::os.version() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -90,7 +90,7 @@ function bashio::os.version() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the latest version of HassOS.
+# Returns the latest version of the MCOS OS.
 # ------------------------------------------------------------------------------
 function bashio::os.version_latest() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -106,7 +106,7 @@ function bashio::os.update_available() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the board running HassOS.
+# Returns the board running the MCOS OS.
 # ------------------------------------------------------------------------------
 function bashio::os.board() {
     bashio::log.trace "${FUNCNAME[0]}"
