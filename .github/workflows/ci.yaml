@@ -44,12 +44,14 @@ jobs:
   lint-prettier:
     name: Prettier
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v6
-      - name: 🚀 Run Prettier
-        uses: creyD/prettier_action@v4.6
+      - name: 🚀 Run Prettier (check only)
+        uses: actions/setup-node@v6
         with:
-          prettier_options: --write **/*.{json,js,md,yaml}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: "22"
+      - name: Verify formatting
+        run: npx --yes prettier@3.8.3 --check "**/*.{json,js,md,yaml}"

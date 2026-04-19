@@ -145,9 +145,14 @@ check [the contributor's page][contributors].
 
 ## Origin
 
-- **Upstream:** [hassio-addons/bashio](https://github.com/hassio-addons/bashio) — Bash helpers for Home Assistant Community Add-on base images, from which this tree was ported.
-- **In this repo:** **Muthur Command** keeps this copy for Muthur Command OS CI and images; helpers and behavior may diverge from upstream over time.
-- **License:** Code inherited from upstream remains **MIT**; see [`LICENSE.md`](./LICENSE.md).
+- **Upstream:**
+  [hassio-addons/bashio](https://github.com/hassio-addons/bashio) —
+  Bash helpers for Home Assistant Community Add-on base images, from which
+  this tree was ported.
+- **In this repo:** **Muthur Command** keeps this copy for Muthur Command OS CI
+  and images; helpers and behavior may diverge from upstream over time.
+- **License:** Code inherited from upstream remains **MIT**; see
+  [`LICENSE.md`](./LICENSE.md).
 
 ## License
 
