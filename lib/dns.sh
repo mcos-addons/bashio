@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# MCOS · Bashio (muthur-command)
-# Bash helpers for MCOS add-on containers; Supervisor REST API compatible.
+# Muthur Command · Bashio
+# Bash helpers for Muthur Command OS add-on containers; Supervisor REST API compatible.
 #
 # It contains a set of commonly used operations and can be used
 # to be included in add-on scripts to reduce code duplication across add-ons.
@@ -100,7 +100,7 @@ function bashio::dns() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the MCOS DNS plugin host.
+# Returns the DNS plugin host.
 # ------------------------------------------------------------------------------
 function bashio::dns.host() {
     bashio::log.trace "${FUNCNAME[0]}"

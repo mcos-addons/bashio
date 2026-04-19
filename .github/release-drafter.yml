@@ -52,8 +52,6 @@ version-resolver:
   default: patch
 
 template: |
-  **MCOS** fork of Bashio (Supervisor-compatible helpers). See **README.md**.
-
   ## What’s changed
 
   $CHANGES

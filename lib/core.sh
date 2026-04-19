@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# MCOS · Bashio (muthur-command)
-# Bash helpers for MCOS add-on containers; Supervisor REST API compatible.
+# Muthur Command · Bashio
+# Bash helpers for Muthur Command OS add-on containers; Supervisor REST API compatible.
 #
 # It contains a set of commonly used operations and can be used
 # to be included in add-on scripts to reduce code duplication across add-ons.
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# Starts MCOS Core.
+# Starts application core.
 # ------------------------------------------------------------------------------
 function bashio::core.start() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -16,7 +16,7 @@ function bashio::core.start() {
 }
 
 # ------------------------------------------------------------------------------
-# Stops MCOS Core.
+# Stops application core.
 # ------------------------------------------------------------------------------
 function bashio::core.stop() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -24,7 +24,7 @@ function bashio::core.stop() {
 }
 
 # ------------------------------------------------------------------------------
-# Restarts MCOS Core.
+# Restarts application core.
 # ------------------------------------------------------------------------------
 function bashio::core.restart() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -32,7 +32,7 @@ function bashio::core.restart() {
 }
 
 # ------------------------------------------------------------------------------
-# Rebuild MCOS Core.
+# Rebuild application core.
 # ------------------------------------------------------------------------------
 function bashio::core.rebuild() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -40,7 +40,7 @@ function bashio::core.rebuild() {
 }
 
 # ------------------------------------------------------------------------------
-# Updates MCOS Core to the latest version.
+# Updates application core to the latest version.
 #
 # Arguments:
 #   $1 Version to update to (optional)
@@ -60,7 +60,7 @@ function bashio::core.update() {
 }
 
 # ------------------------------------------------------------------------------
-# Checks/validates your MCOS Core configuration.
+# Checks/validates your application core configuration.
 # ------------------------------------------------------------------------------
 function bashio::core.check() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -68,7 +68,7 @@ function bashio::core.check() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the logs created by MCOS Core.
+# Returns the logs created by application core.
 # ------------------------------------------------------------------------------
 function bashio::core.logs() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -122,7 +122,7 @@ function bashio::core() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the version of MCOS Core.
+# Returns the version of application core.
 # ------------------------------------------------------------------------------
 function bashio::core.version() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -130,7 +130,7 @@ function bashio::core.version() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the latest version of MCOS Core.
+# Returns the latest version of application core.
 # ------------------------------------------------------------------------------
 function bashio::core.version_latest() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -138,7 +138,7 @@ function bashio::core.version_latest() {
 }
 
 # ------------------------------------------------------------------------------
-# Checks if there is an update available for MCOS Core.
+# Checks if there is an update available for application core.
 # ------------------------------------------------------------------------------
 function bashio::core.update_available() {
     bashio::log.trace "${FUNCNAME[0]}" "$@"
@@ -146,7 +146,7 @@ function bashio::core.update_available() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the arch of MCOS Core.
+# Returns the arch of application core.
 # ------------------------------------------------------------------------------
 function bashio::core.arch() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -154,7 +154,7 @@ function bashio::core.arch() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the machine info running MCOS Core.
+# Returns the machine info running application core.
 # ------------------------------------------------------------------------------
 function bashio::core.machine() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -162,7 +162,7 @@ function bashio::core.machine() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the Docker image of MCOS Core.
+# Returns the Docker image of application core.
 #
 # Arguments:
 #   $1 Image to set (optional).
@@ -182,7 +182,7 @@ function bashio::core.image() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns whether or not a custom version of MCOS Core is installed.
+# Returns whether or not a custom version of application core is installed.
 # ------------------------------------------------------------------------------
 function bashio::core.custom() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -190,7 +190,7 @@ function bashio::core.custom() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns whether or not MCOS Core starts at device boot.
+# Returns whether or not application core starts at device boot.
 # ------------------------------------------------------------------------------
 function bashio::core.boot() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -198,7 +198,7 @@ function bashio::core.boot() {
 
 # ------------------------------------------------------------------------------
 }
-# Returns the port number on which MCOS Core is running.
+# Returns the port number on which application core is running.
 # ------------------------------------------------------------------------------
 function bashio::core.port() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -206,7 +206,7 @@ function bashio::core.port() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns whether or not MCOS Core is running on SSL.
+# Returns whether or not application core is running on SSL.
 # ------------------------------------------------------------------------------
 function bashio::core.ssl() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -214,7 +214,7 @@ function bashio::core.ssl() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns or sets whether or not MCOS Core is monitored by Watchdog.
+# Returns or sets whether or not application core is monitored by Watchdog.
 #
 # Arguments:
 #   $1 True to enable watchdog, false otherwise (optional).
@@ -234,7 +234,7 @@ function bashio::core.watchdog() {
 }
 
 # ------------------------------------------------------------------------------
-# List all available stats about MCOS Core.
+# List all available stats about application core.
 #
 # Arguments:
 #   $1 Cache key to store results in (optional)
@@ -280,7 +280,7 @@ function bashio::core.stats() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns CPU usage from MCOS Core.
+# Returns CPU usage from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.cpu_percent() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -288,7 +288,7 @@ function bashio::core.cpu_percent() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns memory usage from MCOS Core.
+# Returns memory usage from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.memory_usage() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -298,7 +298,7 @@ function bashio::core.memory_usage() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns memory limit from MCOS Core.
+# Returns memory limit from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.memory_limit() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -308,7 +308,7 @@ function bashio::core.memory_limit() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns memory usage in percent from MCOS Core.
+# Returns memory usage in percent from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.memory_percent() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -318,7 +318,7 @@ function bashio::core.memory_percent() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns outgoing network usage from MCOS Core.
+# Returns outgoing network usage from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.network_tx() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -326,7 +326,7 @@ function bashio::core.network_tx() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns incoming network usage from MCOS Core.
+# Returns incoming network usage from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.network_rx() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -334,7 +334,7 @@ function bashio::core.network_rx() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns disk read usage from MCOS Core.
+# Returns disk read usage from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.blk_read() {
     bashio::log.trace "${FUNCNAME[0]}"
@@ -342,7 +342,7 @@ function bashio::core.blk_read() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns disk write usage from MCOS Core.
+# Returns disk write usage from application core.
 # ------------------------------------------------------------------------------
 function bashio::core.blk_write() {
     bashio::log.trace "${FUNCNAME[0]}"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# MCOS · Bashio (muthur-command)
-# Bash helpers for MCOS add-on containers; Supervisor REST API compatible.
+# Muthur Command · Bashio
+# Bash helpers for Muthur Command OS add-on containers; Supervisor REST API compatible.
 #
 # It contains a set of commonly used operations and can be used
 # to be included in add-on scripts to reduce code duplication across add-ons.
@@ -928,7 +928,7 @@ function bashio::addon.hassio_role() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the minimal required MCOS Core version needed by this add-on.
+# Returns the minimal required application core version needed by this add-on.
 #
 # Arguments:
 #   $1 Add-on slug (optional, default: self)
@@ -940,7 +940,7 @@ function bashio::addon.homeassistant() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns whether or not this add-on can access the MCOS Core API.
+# Returns whether or not this add-on can access the application core API.
 #
 # Arguments:
 #   $1 Add-on slug (optional, default: self)

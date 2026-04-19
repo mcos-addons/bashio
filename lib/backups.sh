@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# MCOS · Bashio (muthur-command)
-# Bash helpers for MCOS add-on containers; Supervisor REST API compatible.
+# Muthur Command · Bashio
+# Bash helpers for Muthur Command OS add-on containers; Supervisor REST API compatible.
 #
 # It contains a set of commonly used operations and can be used
 # to be included in add-on scripts to reduce code duplication across add-ons.
@@ -224,7 +224,7 @@ function bashio::backup.location() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns the version of MCOS Core that was in use when the backup is
+# Returns the version of application core that was in use when the backup is
 # created.
 #
 # Arguments: $1 Backup slug
@@ -293,7 +293,7 @@ function bashio::backup.folders() {
 }
 
 # ------------------------------------------------------------------------------
-# Returns if the MCOS Core database file was excluded from this backup.
+# Returns if the application core database file was excluded from this backup.
 #
 # Arguments:
 #   $1 Backup slug
