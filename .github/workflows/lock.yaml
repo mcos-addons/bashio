@@ -7,6 +7,11 @@ on:
     - cron: "0 9 * * *"
   workflow_dispatch:
 
+permissions:
+  # Required for dessant/lock-threads (issues/lock, pulls/lock); default token may be read-only.
+  issues: write
+  pull-requests: write
+
 jobs:
   lock:
     name: 🔒 Lock closed issues and PRs
