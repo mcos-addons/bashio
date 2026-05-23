@@ -8,7 +8,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  # Required for dessant/lock-threads (issues/lock, pulls/lock); default token may be read-only.
   issues: write
   pull-requests: write
 
@@ -17,10 +16,7 @@ jobs:
     name: 🔒 Lock closed issues and PRs
     runs-on: ubuntu-latest
     steps:
-      - uses: dessant/lock-threads@7266a7ce5c1df01b1c6db85bf8cd86c737dadbe7 # v6.0.0
+      - uses: muthur-command/actions/helpers/lock-issues@mc
         with:
-          # Do not pass github-token: JWT exceeds lock-threads v6 max length (100); use runner GITHUB_TOKEN.
           issue-inactive-days: "30"
-          issue-lock-reason: ""
           pr-inactive-days: "1"
-          pr-lock-reason: ""
