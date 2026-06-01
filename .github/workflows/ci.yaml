@@ -20,6 +20,9 @@ jobs:
         uses: actions/checkout@v6
       - name: 🚀 Run mdl
         uses: actionshub/markdownlint@v3.1.4
+        with:
+          # changelog-from-release generates HTML anchors and alert syntax
+          filesToIgnoreRegex: CHANGELOG\.md
 
   lint-shellcheck:
     name: Shellcheck
