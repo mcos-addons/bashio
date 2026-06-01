@@ -108,13 +108,20 @@ This repository keeps a change log using [GitHub's releases][releases]
 functionality. The format of the log is based on
 [Keep a Changelog][keepchangelog].
 
-Releases are based on [Semantic Versioning][semver], and use the format
-of `MAJOR.MINOR.PATCH`. In a nutshell, the version will be incremented
-based on the following:
+Releases use [Calendar Versioning (CalVer)][calver] in the form `YYYY.MM.PATCH`,
+aligned with the Muthur Command release scheme:
 
-- `MAJOR`: Incompatible or major changes.
-- `MINOR`: Backwards-compatible new features and enhancements.
-- `PATCH`: Backwards-compatible bugfixes and package updates.
+- **`YYYY.MM.PATCH`** — stable release (for example `2026.06.0`).
+- **`YYYY.MM.PATCHbN`** — beta pre-release (for example `2026.06.0b1`).
+- **`YYYY.MM.PATCH.devYYYYMMDDHHMM`** — development build (for example `2026.06.0.dev202606011200`).
+
+The **`PATCH`** segment increments for each stable release within the same UTC
+month (`YYYY.MM`). When the month changes, the next stable release starts at
+`.0`.
+
+Draft releases on the `mc` branch are prepared automatically by
+[Release Drafter](.github/workflows/release-drafter.yaml); publishing a release
+updates `BASHIO_VERSION` in `lib/bashio.sh` and opens a changelog PR.
 
 ## Support
 
@@ -183,4 +190,4 @@ check [the contributor's page][contributors].
 [releases-shield]: https://img.shields.io/github/release/mcio-addons/bashio.svg
 [releases]: https://github.com/mcio-addons/bashio/releases
 [repository]: https://github.com/mcio-addons/repository
-[semver]: http://semver.org/spec/v2.0.0
+[calver]: https://calver.org/

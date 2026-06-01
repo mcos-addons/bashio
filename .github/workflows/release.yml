@@ -1,0 +1,45 @@
+name: Release
+
+# yamllint disable-line rule:truthy
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  sync-library-version:
+    name: Sync BASHIO_VERSION
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v6
+        with:
+          ref: mc
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Update BASHIO_VERSION
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -eo pipefail
+          version="${TAG#v}"
+          if [[ ! "${version}" =~ ^[0-9]{4}\.[0-9]{2}\.[0-9]+$ ]]; then
+            echo "::error::Unsupported release tag '${TAG}' (expected YYYY.MM.PATCH or vYYYY.MM.PATCH)"
+            exit 1
+          fi
+          sed -i "s/^readonly BASHIO_VERSION=\".*\"/readonly BASHIO_VERSION=\"${version}\"/" lib/bashio.sh
+          grep -q "^readonly BASHIO_VERSION=\"${version}\"" lib/bashio.sh
+
+      - name: Commit version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/bashio.sh
+          if git diff --staged --quiet; then
+            echo "BASHIO_VERSION already matches release tag"
+            exit 0
+          fi
+          git commit -m "Bump BASHIO_VERSION to ${{ github.event.release.tag_name }}"
+          git push

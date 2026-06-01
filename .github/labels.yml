@@ -79,7 +79,7 @@
 
 - name: "major"
   color: b60205
-  description: "This PR causes a major version bump in the version number."
+  description: "Large or incompatible change (release notes / triage only)."
 - name: "minor"
   color: 0e8a16
-  description: "This PR causes a minor version bump in the version number."
+  description: "Notable feature or enhancement (release notes / triage only)."
