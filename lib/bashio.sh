@@ -18,7 +18,7 @@ shopt -s inherit_errexit 2>/dev/null || true # Command substitution inherits the
 # ==============================================================================
 
 # Bashio version number
-readonly BASHIO_VERSION="0.1.0"
+readonly BASHIO_VERSION="2026.06.0"
 
 # Stores the location of this library
 readonly __BASHIO_LIB_DIR=$(dirname "${BASH_SOURCE[0]}")
